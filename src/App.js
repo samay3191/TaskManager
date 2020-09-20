@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import ToDo from "./components/ToDo";
 import { addToDo } from "./reducers/toDoReducer";
 
@@ -10,10 +10,6 @@ const App = () => {
     dispatch(addToDo({ text: "Food", selected: true }, "toDo"));
     dispatch(addToDo({ text: "Work", selected: false }, "toDo"));
   }, []);
-
-  const state = useSelector(state => state);
-
-  console.log(state);
 
   return <div className="bg-white w-screen h-screen">
     <div className="text-center text-2xl bg-blue-500 text-white font-bold p-2 shadow-sm">To-Do</div>

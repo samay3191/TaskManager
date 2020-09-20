@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { removeItem, selectItem } from "../actions/action";
 import CheckedIcon from "../images/icon-checked.svg";
@@ -6,8 +7,8 @@ import DeleteIcon from "../images/icon-delete.svg";
 
 const Item = ({ data }) => {
   const dispatch = useDispatch();
-  const { text, selected } = data;
-  
+  const { id, text, selected } = data;
+
   return (
     <div className="flex p-2 bg-white justify-between rounded-md my-1">
       <div>{text}</div>
@@ -18,7 +19,7 @@ const Item = ({ data }) => {
               src={CheckedIcon}
               alt="select"
               className="w-4 align-middle mx-1 cursor-pointer"
-              onClick={() => dispatch(selectItem(data.text))}
+              onClick={() => dispatch(selectItem(id))}
             />
           </div>
         )}
@@ -27,7 +28,7 @@ const Item = ({ data }) => {
             src={DeleteIcon}
             alt="delet"
             className="w-4 align-middle cursor-pointer"
-            onClick={() => dispatch(removeItem(data.text))}
+            onClick={() => dispatch(removeItem(id))}
           />
         </div>
       </div>
@@ -35,14 +36,32 @@ const Item = ({ data }) => {
   );
 };
 
+Item.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired,
+  }),
+};
+
 const ItemsTable = ({ data }) => {
   return (
     <div className="flex flex-col-reverse">
       {data.map((item) => (
-        <Item key={item.text} data={item} />
+        <Item key={item.id} data={item} />
       ))}
     </div>
   );
+};
+
+ItemsTable.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      selected: PropTypes.bool.isRequired,
+    })
+  ),
 };
 
 export default ItemsTable;
