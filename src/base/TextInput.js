@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import DOMPurify from 'dompurify';
 
 const TextInput = ({ value, onChange, placeHolder }) => {
   const handleChange = (e) => {
-    onChange(e.target.value);
+    const val = DOMPurify.sanitize(e.target.value);
+    onChange(val);
   };
 
   return (
