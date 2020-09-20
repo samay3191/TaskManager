@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render Button component 1`] = `
+<div
+  className="m-1 w-12"
+>
+  <button
+    className="bg-blue-800 h-full text-xs text-white rounded-lg py-2 px-3 leading-3 align-middle "
+    disabled={false}
+    onClick={[MockFunction]}
+    type="button"
+  >
+    Submit
+  </button>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemsTable /> should render ItemsTable component 1`] = `
+<div
+  className="flex flex-col-reverse"
+>
+  <Item
+    data={
+      Object {
+        "id": "abc",
+        "selected": false,
+        "text": "Food",
+      }
+    }
+    key="abc"
+  />
+</div>
+`;

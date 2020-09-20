@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> should render TextInput component 1`] = `
+<div
+  className="m-1 leading-3"
+>
+  <input
+    className="py-1 border border-gray-400 box-border outline-none rounded-lg px-2"
+    onChange={[Function]}
+    placeholder="Enter data"
+    type="text"
+    value=""
+  />
+</div>
+`;

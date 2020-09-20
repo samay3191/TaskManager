@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToDo /> should render ToDo component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <ToDo>
+    <div
+      className="bg-blue-200 rounded-lg m-4 p-2 shadow-sm flex flex-col"
+    >
+      <div
+        className="flex justify-center flex-wrap my-4"
+      >
+        <TextInput
+          onChange={[Function]}
+          placeHolder="Inset an Item"
+          value=""
+        >
+          <div
+            className="m-1 leading-3"
+          >
+            <input
+              className="py-1 border border-gray-400 box-border outline-none rounded-lg px-2"
+              onChange={[Function]}
+              placeholder="Inset an Item"
+              type="text"
+              value=""
+            />
+          </div>
+        </TextInput>
+        <Button
+          disabled={true}
+          onClick={[Function]}
+          text="Submit"
+        >
+          <div
+            className="m-1 w-12"
+          >
+            <button
+              className="bg-blue-800 h-full text-xs text-white rounded-lg py-2 px-3 leading-3 align-middle opacity-25"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            >
+              Submit
+            </button>
+          </div>
+        </Button>
+      </div>
+      <div
+        className="p-1 text-center h-8 text-red-700"
+      />
+      <div
+        className="my-4"
+      >
+        <ItemsTable
+          data={Array []}
+        >
+          <div
+            className="flex flex-col-reverse"
+          />
+        </ItemsTable>
+      </div>
+      <div
+        className="flex justify-center items-center text-xs font-bold px-1"
+      >
+        <div>
+          ALL(
+          0
+          )
+        </div>
+        <div
+          className="mx-auto flex"
+        >
+          <Filter
+            filterType="ALL"
+            text="All"
+          >
+            <div
+              className="cursor-pointer hover:text-orange-600 m-1 text-blue-700"
+              onClick={[Function]}
+            >
+              All
+            </div>
+          </Filter>
+          <Filter
+            filterType="ACTIVE"
+            text="Active"
+          >
+            <div
+              className="cursor-pointer hover:text-orange-600 m-1 "
+              onClick={[Function]}
+            >
+              Active
+            </div>
+          </Filter>
+          <Filter
+            filterType="SELECTED"
+            text="Completed"
+          >
+            <div
+              className="cursor-pointer hover:text-orange-600 m-1 "
+              onClick={[Function]}
+            >
+              Completed
+            </div>
+          </Filter>
+        </div>
+      </div>
+    </div>
+  </ToDo>
+</Provider>
+`;
